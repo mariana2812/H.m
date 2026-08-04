@@ -23,7 +23,7 @@ body {
     
     /* Assim que a palavra entra no DOM, ela surge com essa animação */
     animation: surgir 0.4s ease-out, pulsar 2s infinite ease-in-out 0.4s;
-}
+}  
 
 /* Animação de entrada (de pequeno para o tamanho normal) */
 @keyframes surgir {
