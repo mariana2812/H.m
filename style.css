@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b12;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#heart-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.word {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #ff4d8d;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    
+    /* Assim que a palavra entra no DOM, ela surge com essa animação */
+    animation: surgir 0.4s ease-out, pulsar 2s infinite ease-in-out 0.4s;
+}
+
+/* Animação de entrada (de pequeno para o tamanho normal) */
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Brilho continuo suave */
+@keyframes pulsar {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff4d8d, 0 0 10px #ff1a75;
+        color: #ff4d8d;
+    }
+    50% {
+        text-shadow: 0 0 12px #ff80ab, 0 0 20px #ff1a75;
+        color: #ffffff;
+    }
+}
